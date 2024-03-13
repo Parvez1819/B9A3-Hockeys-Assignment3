@@ -16,8 +16,8 @@
             theme: {
                 extend: {
                     colors: {
-                        'gradient-start': '#FF8938',
-                        'gradient-end': '#F00',
+                        'button-background': '#FF4240',
+                        '.progress-border-one': '#F00',
                     }
                 }
             }
@@ -39,7 +39,7 @@
     <!-- header section -->
     <header class="container mx-auto">
         <!-- nav section -->
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 my-16 relative">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -51,18 +51,18 @@
                     </div>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
+                        <li><a class="text-[#FF4240]">Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Pages</a></li>
                         <li><a>Blogs</a></li>
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">Hockey<span class="text-[#FF4240]">'</span>s</a>
+                <a class="btn btn-ghost text-3xl font-bold">Hockey<span class="text-[#FF4240]">'</span>s</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                    <li><a class="text-[#FF4240]">Home</a></li>
                     <li><a>About</a></li>
                     <li><a>Pages</a></li>
                     <li><a>Blogs</a></li>
@@ -70,13 +70,107 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <a class="btn">Button</a>
+                <i class="fa-solid text-2xl fa-magnifying-glass pr-3 md:pr-4 lg:pr-6"></i>
+                <a class="btn bg-button-background text-white px-6 py-4 font-xl font-bold">Get Ticket</a>
             </div>
+        </div>
+        <!-- carousel section -->
+        <div class="carousel w-full ">
+            <!-- carousel card one -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="./Images/1.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+                <div
+                    class="mt-8 lg:mt-0 hidden lg:block lg:absolute max-w-[500px] text-center text-white rounded-2xl	p-8 space-y-4 bg-[#131318]  lg:bottom-16 lg:right-16">
+                    <h1 class="text-2xl	font-extrabold">Meet All the Heroes from the field</h1>
+                    <p>In the field, brave firefighters battle flames, while selfless paramedics rush to save lives.
+                        Dedicated doctors and compassionate nurses tirelessly care for the wounded. </p>
+                </div>
+            </div>
+            <!-- carousel card two -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="./Images/1.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+                <div
+                    class="mt-8 lg:mt-0 hidden lg:block lg:absolute max-w-[500px] text-center text-white rounded-2xl	p-8 space-y-4 bg-[#131318]  lg:bottom-16 lg:right-16">
+                    <h1 class="text-2xl	font-extrabold">Meet All the Heroes from the field</h1>
+                    <p>In the field, brave firefighters battle flames, while selfless paramedics rush to save lives.
+                        Dedicated doctors and compassionate nurses tirelessly care for the wounded. </p>
+                </div>
+            </div>
+            <!-- carousel card three -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="./Images/1.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+                <div
+                    class="mt-8 lg:mt-0 hidden lg:block lg:absolute max-w-[500px] text-center text-white rounded-2xl	p-8 space-y-4 bg-[#131318]  lg:bottom-16 lg:right-16">
+                    <h1 class="text-2xl	font-extrabold">Meet All the Heroes from the field</h1>
+                    <p class="">In the field, brave firefighters battle flames, while selfless paramedics rush to save
+                        lives.
+                        Dedicated doctors and compassionate nurses tirelessly care for the wounded. </p>
+                </div>
+            </div>
+
+
+        </div>
+        <div
+            class="mt-4 lg:mt-0 block lg:hidden lg:absolute lg:max-w-[500px] text-center text-white rounded-2xl	p-8 space-y-4 bg-[#131318]  lg:bottom-16 lg:right-16">
+            <h1 class="text-2xl	font-extrabold">Meet All the Heroes from the field</h1>
+            <p>On the hockey field, skilled players glide with finesse, scoring goals, while resilient goalkeepers
+                defend fiercely.</p>
         </div>
     </header>
     <!-- main section -->
-    <main>
+    <main class="container mx-auto">
+        <!-- professional section -->
+        <section class="my-16">
+            <div class="border-t-2 border-b-2 py-8 border-dashed">
+                <h2 class="text-4xl font-extrabold text-center">Professional Hockeys Club</h2>
+                <p class="text-center font-medium mt-6">Elite athletes compete fiercely for glory in professional hockey
+                    clubs, thrilling fans worldwide</p>
+            </div>
+            <!-- progress container -->
+            <div class="grid p-4 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-5">
+                <!-- progress one -->
+                <div class="text-center">
+                    <div class="radial-progress  text-[#f00] mb-4" style="--value:87;" role="progressbar"><span
+                            class="text-black font-extrabold text-xl">87%</span></div>
+                    <h4 class="text-xl font-semibold text-[#131318]">Prayer Facility</h4>
+                    <p class="text-[#13131899]">Sanctuary for spiritual solace, reflection, and worship.</p>
+                </div>
+                <!-- progress two -->
+                <div class="text-center">
+                    <div class="radial-progress  text-[#49D293] mb-4" style="--value:95;" role="progressbar"><span
+                            class="text-black font-extrabold text-xl">95%</span></div>
+                    <h4 class="text-xl font-semibold text-[#131318]">Experienced Coach</h4>
+                    <p class="text-[#13131899]">Seasoned mentor, skilled guide, adept strategist in sports.</p>
+                </div>
+                <!-- progress one -->
+                <div class="text-center">
+                    <div class="radial-progress  text-[#4C8DF1] mb-4" style="--value:90;" role="progressbar"><span
+                            class="text-black font-extrabold text-xl">90%</span></div>
+                    <h4 class="text-xl font-semibold text-[#131318]">Senior Player</h4>
+                    <p class="text-[#13131899]">Veteran athlete, seasoned competitor, esteemed leader in sports.</p>
+                </div>
+                <!-- progress one -->
+                <div class="text-center">
+                    <div class="radial-progress  text-[#FFFF00] mb-4" style="--value:80;" role="progressbar"><span
+                            class="text-black font-extrabold text-xl">80%</span></div>
+                    <h4 class="text-xl font-semibold text-[#131318]">Training Ground</h4>
+                    <p class="text-[#13131899]">Foundation for skill development, teamwork, and athletic excellence.</p>
+                </div>
+
+            </div>
+        </section>
 
     </main>
     <!-- footer section -->
